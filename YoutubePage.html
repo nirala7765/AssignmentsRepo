@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Home</title>
+
+
+    <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        background-color: black;
+        color: white;
+    }
+    .box{
+        width: 100vw;
+        height: max-content;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 14px;
+        gap: 10px;
+    }
+   .markline{
+    margin-top: 18px;
+    border-radius: 100px;
+    margin-left: 25px;
+   }
+
+    .head{
+        display: flex;
+        
+    }
+    
+    .logoYoutube{
+        width: 200px;
+        
+        
+    }
+    .search{
+        width: 500px;
+            height: 40px;
+            border-radius: 100px;
+            padding: 5px 12px;
+            margin-left: 100px;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            margin-top: 15px;
+            border: 1px solid gray;
+    }
+    .miclogo{
+        border-radius: 100px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    .Searchlogo{
+        margin-top: 20px;
+        margin-left: 10px;
+        border-radius: 100px;
+        
+    }
+    .owner{
+        border-radius: 100px;
+        margin-top: 20px;
+
+        
+    }
+    .createButton{
+        margin-top: 13px;
+        border-radius: 100px;
+        margin-left: 230px;
+        
+    }
+    .notificationbutton{
+        margin-top: 18px;
+        border-radius: 100px;
+        margin-right: 20px;
+    }
+    .markline:hover {
+        cursor: pointer;
+        background-color: rgb(200, 205, 205);
+     }
+    .Searchlogo:hover {
+        cursor: pointer;
+        background-color: rgb(123, 122, 122);
+    }
+    .miclogo:hover{
+        cursor: pointer;
+        background-color: rgb(123, 122, 122);
+    }
+    .createButton:hover{
+         cursor: pointer;
+        background-color: rgb(123, 122, 122);
+        
+    }
+    .notificationbutton:hover{
+        cursor: pointer;
+        background-color: rgb(123, 122, 122);
+    }
+    .owner:hover{
+        cursor: pointer;
+    }
+
+    .sidebar{
+        float: left;
+        width: 130px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+
+    .sidebar img {
+        width: 80px;
+        height: 80px;
+        border-radius: 15px;
+    }
+    #home{
+        margin-left: 10px;
+    }
+    #subscrip{
+        margin-left: 15px;
+    }
+    .sidebar img:hover{
+        cursor: pointer;
+        background-color: rgb(123, 122, 122);
+    }
+
+   .Buttons{
+    float: left;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+   }
+
+.Buttons button {
+
+border: none;
+background-color: rgb(46, 45, 45);
+color: white;
+border-radius: 10px;
+padding: 7px 14px;
+font-size: 15px;
+cursor: pointer;
+}
+
+.Buttons button:hover{
+background-color:white;
+color: black;
+}
+#allButton{
+    background-color: white;
+    color: black;
+}
+
+
+.video-container {
+            width: 80%;
+            height:max-content;
+            /* border: 1px solid red; */
+            margin: 60px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap:10px;
+        }
+        .video-card {
+            width: 350px;
+            height: 350px;
+            /* border: 1px solid white; */
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .video-card .image img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .logo-title {
+            display: flex;
+            gap: 8px;
+            margin: 3px;;
+        }
+        .logo-title img {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .gray {
+            color: rgb(199, 192, 192);
+            font-size: 15px;
+        }
+        .title {
+            font-size: 16px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <header>
+            <div class="head">
+                <img class="markline" src="/3lines-removebg-preview.png" width="50px" height="50px" alt="">
+                <img class="logoYoutube" src="https://community.edyoda.com/uploads/default/original/2X/4/4862c8aa33205a563979ad263d08e1a7cdc61f19.webp" alt="">
+                <input class="search" type="text" placeholder="Search">
+                <img class="Searchlogo" src="/whiteSearch-removebg-preview.png"  width="40px" height="40px" alt="">
+                <img class="miclogo" src="/whitemic-removebg-preview.png" width="40px" height="40px" alt="">
+                <img class="createButton" src="/create-removebg-preview.png" width="60px" height="60px" alt="">
+                <img  class="notificationbutton" src="/notifiocation-removebg-preview.png" width="60px" height="60px " alt="">
+                <img class="owner" src="/IMG_2694.JPG" width="50px" height="50px" alt="">
+            </div>
+        </header>
+
+
+       <div class="sidebar">
+        <img  id="home" src="/home-removebg-preview.png"  alt="">
+        <img id="short" src="/shorts-removebg-preview.png"    alt="">
+        <img id="subscrip" src="/subscription-removebg-preview.png" alt="">
+        <img src="/original-removebg-preview.png" alt="">
+        <img src="/library-removebg-preview.png" alt="">
+        <img src="/downloads-removebg-preview.png" alt="">
+       </div>
+
+       <div class="Buttons">
+        <Button id="allButton" class="button">All</Button>
+        <Button class="button">Music</Button>
+        <button class="button">Gaming</button>
+        <button class="button">Comedy</button>
+        <button class="button">Love Songs</button>
+        <button class="button">News</button>
+        <button class="button">Live</button>
+        <button class="button">Cricket</button>
+        <button class="button">Asian Music</button>
+        <button class="button">Cars</button>
+        <button class="button">Movies</button>
+        <button class="button">Drama</button>
+        <button class="button">Action</button>
+        <button class="button">Arijit Singh</button>
+       
+       </div>
+       <div class="video-container">
+
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+
+
+
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+            
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="video-card">
+            <div class="image">
+                <img src="/thumnails.png" alt="thumbnail">
+            </div>
+
+            <div class="logo-title">
+
+                <img src="/IMG_2694.JPG" alt="logo">
+
+                <div class="meta-info">
+                    <span class="title">2023 BMW M340i review - Bang for your buck | First Drive | Autocar India</span>
+                    <span class="gray">Nirala</span>
+                    <span class="gray">3M views &dotsquare; 1 Month ago</span>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+
+    </div>
+
+    </div>
+     
+
+    
+</body>
+</html>
